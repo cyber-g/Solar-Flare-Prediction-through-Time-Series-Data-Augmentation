@@ -1,4 +1,4 @@
-# this is to concat the augmented X class with the original X class
+# This is to concat the synthetic X class with the original X class into different syn/real ratio x-class samples
 import pandas as pd
 import numpy as np
 import pickle
