@@ -23,10 +23,10 @@ warnings.filterwarnings("ignore", message=".*size changed.*", category=RuntimeWa
 
 def load_real_syn_binary(aug_method):
 
-    real_X = pd.read_pickle("/home/dmlab/Peiyu/SF/data/X_inputs1.pck")
+    real_X = pd.read_pickle("/data/X_inputs1.pck")
     real_y = [0] * 385
 
-    syn_X = np.load("/home/dmlab/Peiyu/SF/synthetic_X-class/" + aug_method + "/Solarflare/X_train_aug.npy")
+    syn_X = np.load("/synthetic_X-class/" + aug_method + "/Solarflare/X_train_aug.npy")
     syn_y = [1] * 385
 
     real_X = np.array(real_X)
