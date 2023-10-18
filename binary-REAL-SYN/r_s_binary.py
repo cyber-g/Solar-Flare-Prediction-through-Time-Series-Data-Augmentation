@@ -47,7 +47,7 @@ def create_classifier(classifier_name, input_shape, nb_classes, output_directory
         from classifiers_syn_real_binary import mlstm_fcn
         return mlstm_fcn.Classifier_LSTM_FCN(output_directory, input_shape, nb_classes, verbose)
 # change this directory for your machine
-root_dir = '/home/dmlab/Peiyu/SF'
+root_dir = '/SF'
 
 if sys.argv[1] == 'run_all':
     for classifier_name in CLASSIFIERS:
@@ -110,5 +110,3 @@ else:
         # the creation of this directory means
         create_directory(output_directory + '/DONE')
 
-
-# nohup python3 r_s_binary.py run_all > r_s_binary.log 2>&1 &
