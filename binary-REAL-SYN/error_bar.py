@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 models = ['fcn', 'resnet', 'lstm_fcn']
-path = '/Users/peiyuli/PycharmProjects/aug_sf/results_syn_real_binary/'
+path = '/aug_sf/results_syn_real_binary/'
 
 def plot(model):
     df = pd.read_csv(path + model + "/res.csv")
