@@ -1,3 +1,4 @@
+# Adapted from the code by [Fazle Karim and Somshubra Majumdar and Houshang Darabi and Samuel Harford] available at https://github.com/titu1994/MLSTM-FCN/tree/master
 import tensorflow.keras as keras
 import tensorflow as tf
 import numpy as np
@@ -42,6 +43,9 @@ class Classifier_LSTM_FCN:
         lstm = keras.layers.Masking()(input_layer)
         lstm = keras.layers.LSTM(8)(lstm)
         lstm = keras.layers.Dropout(0.8)(lstm)
+        '''
+        Note: The input to the Input layer of all models will be pre-shuffled to be in the shape (Batchsize, Number of variables, Number of timesteps), and the input will be shuffled again before being applied to the CNNs (to obtain the correct shape (Batchsize, Number of timesteps, Number of variables)). This is in contrast to the paper where the input is of the shape (Batchsize, Number of timesteps, Number of variables) and the shuffle operation is applied before the LSTM to obtain the input shape (Batchsize, Number of variables, Number of timesteps). These operations are equivalent.
+        '''
 
         conv1 = keras.layers.Permute((2, 1))(input_layer)
         conv1 = keras.layers.Conv1D(128, 8, padding='same', kernel_initializer='he_uniform')(conv1)
