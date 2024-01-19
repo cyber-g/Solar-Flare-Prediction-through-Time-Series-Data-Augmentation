@@ -1,4 +1,4 @@
-# Adapted from the code by [Fazle Karim and Somshubra Majumdar and Houshang Darabi and Samuel Harford] available at https://github.com/titu1994/MLSTM-FCN/tree/master
+# Adapted from the code by [Fazle Karim and Somshubra Majumdar and Houshang Darabi and Samuel Harford] available at [https://github.com/titu1994/MLSTM-FCN/tree/master]
 import tensorflow.keras as keras
 import tensorflow as tf
 import numpy as np
