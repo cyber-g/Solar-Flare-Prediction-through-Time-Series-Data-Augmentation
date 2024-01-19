@@ -1,4 +1,4 @@
-# resnet model
+# Adapted from the code by [Ismail Fawaz] available at [https://github.com/hfawaz/dl-4-tsc]
 # when tuning start with learning rate->mini_batch_size ->
 # momentum-> #hidden_units -> # learning_rate_decay -> #layers
 import tensorflow.keras as keras
