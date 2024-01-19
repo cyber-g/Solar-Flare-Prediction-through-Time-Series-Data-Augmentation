@@ -1,3 +1,4 @@
+# Adapted from the code by [Ismail Fawaz] available at [https://github.com/hfawaz/dl-4-tsc]
 import tensorflow.keras as keras
 import tensorflow as tf
 import numpy as np
